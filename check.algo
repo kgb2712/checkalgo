@@ -1,0 +1,35 @@
+ALGORITHM phrase
+VAR
+ // Initialisation des compteurs
+    longueur_phrase = 0
+    nombre_mots = 0
+    nombre_voyelles = 0
+
+BEGIN
+      //Parcours de chaque caractère dans la phrase
+    Pour chaque caractère dans phrase:
+        // Incrémentation de la longueur de la phrase
+        longueur_phrase += 1
+
+        // Vérification si le caractère est une voyelle
+        Si caractère est une voyelle:
+            nombre_voyelles += 1
+
+        // Vérification si le caractère est un espace (pour compter les mots)
+        Si caractère est un espace:
+            nombre_mots += 1
+
+    //Ajout d un mot supplémentaire pour le dernier mot après le dernier espace
+    nombre_mots += 1
+
+    // Affichage des résultats
+    Afficher "Longueur de la phrase :", longueur_phrase
+    Afficher "Nombre de mots dans la phrase :", nombre_mots
+    Afficher "Nombre de voyelles dans la phrase :", nombre_voyelles
+
+    // Exemple d utilisation
+    phrase_test = "Bonjour, comment ça va ?"
+    analyse_phrase(phrase_test)
+
+
+END
